@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "proxy": "https://ciisa.coningenio.cl",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5",
