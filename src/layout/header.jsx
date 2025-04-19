@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({lang,handleLang}) => {
+  const navigate = useNavigate();
   const [isCollapsed, setIsCollapsed] = useState(true); 
 
   const translations = {
@@ -54,16 +56,16 @@ const Header = ({lang,handleLang}) => {
               <div className="d-flex mx-auto flex-column flex-lg-row align-items-center">
                 <ul className="navbar-nav">
                   <li className="nav-item active">
-                    <a className="nav-link" to="/">{translations.HOME[lang]}</a>
+                    <a className="nav-link" onClick={() => navigate('/')} >{translations.HOME[lang]}</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" to="/nosotros">{translations.US[lang]}</a>
+                    <a className="nav-link" onClick={() => navigate('/nosotros')}>{translations.US[lang]}</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" to="/servicios">{translations.SERVICES[lang]}</a>
+                    <a className="nav-link" onClick={() => navigate('/servicios')}>{translations.SERVICES[lang]}</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" to="/contacto">{translations.CONTACT[lang]}</a>
+                    <a className="nav-link" onClick={() => navigate('/contacto')}>{translations.CONTACT[lang]}</a>
                   </li>
                 </ul>
               </div>

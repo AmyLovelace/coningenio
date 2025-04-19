@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getServices } from '../services/servicios';
-import { useLanguage } from '../context/LanguajeContext';
+import { getServices } from '../../services/servicios';
+import { useLanguage } from '../../hooks/useLanguage';
 
 const Services = () => {
   const [services, setServices] = useState([]);

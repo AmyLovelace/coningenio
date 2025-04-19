@@ -1,15 +1,29 @@
-import Layout from './components/Layout'
+import Layout from './layout/Layout'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import { LanguageProvider } from './context/LanguageProvider';
+
+import AboutPage from './pages/about'
+import HomePage from './pages/homepage'
+import Services from './components/ServicesComp/ServicesComp';
 
 function App() {
-
   return (
-    <>
-    <Layout>
-      <h1>Bienvenido a mi sitio 🚀</h1>
-      <p>Este es el contenido principal.</p>
-    </Layout>
-    </>
-  )
+    <LanguageProvider>
+      <Router>
+        <Routes>
+          <Route>
+            <Route path="/" element={<Layout><HomePage /></Layout>} />
+            <Route path="/nosotros" element={<Layout><AboutPage /></Layout>} />
+            <Route path="/servicios" element={<Layout><Services /></Layout>} />
+          </Route>
+        </Routes>
+      </Router>
+    </LanguageProvider>
+  );
 }
 
 export default App

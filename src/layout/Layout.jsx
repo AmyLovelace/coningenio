@@ -1,8 +1,8 @@
 // src/components/Layout.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './header';
 import Footer from './footer';
-import { useLanguage } from '../context/LanguajeContext';
+import { useLanguage } from '../hooks/useLanguage';
 
 const Layout = ({ children }) => {
 
