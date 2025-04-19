@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Footer = ({lang}) => {
 
@@ -14,9 +14,9 @@ const Footer = ({lang}) => {
 
   return (
 
-      <section class="container-fluid footer_section">
-          <div class="container mt-5">
-              <div class="btn-box">
+      <section className="container-fluid footer_section">
+          <div className="container mt-5">
+              <div className="btn-box">
                   <a href="/">
                   {translations.MORE[lang]}
                   </a>
