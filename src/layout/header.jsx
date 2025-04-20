@@ -53,13 +53,14 @@ const Header = ({lang,handleLang}) => {
        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' } }>
        <div className="lang-toggle">
           {lang === 'esp' ? (
-            <button onClick={() => handleLang('eng')} style={{ background: 'none', border: 'none', fontSize: '1rem',padding:'0'  }}>
-              🇪🇸
-            </button>
+             <button onClick={() => handleLang('eng')} style={{ background: 'none', border: 'none', fontSize: '1rem' ,padding:'0' }}>
+             🇬🇧
+           </button>
+            
           ) : (
-            <button onClick={() => handleLang('esp')} style={{ background: 'none', border: 'none', fontSize: '1rem' ,padding:'0' }}>
-              🇬🇧
-            </button>
+            <button onClick={() => handleLang('esp')} style={{ background: 'none', border: 'none', fontSize: '1rem',padding:'0'  }}>
+            🇪🇸
+          </button>
           )}
         </div>
 
