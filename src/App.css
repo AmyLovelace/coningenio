@@ -53,7 +53,7 @@ body {
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-  background-image: url('../assets/img/menu.png');
+  background-image: url('/assets/img/menu.png');
   background-size: 42px;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
+  /* background-image: url('/assets/img/search-icon.png'); */
 
   background-size: 22px;
   background-repeat: no-repeat;

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "proxy": "https://ciisa.coningenio.cl",
+  "homepage": ".",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5",
