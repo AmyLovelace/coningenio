@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getAbout } from '../services/nosotros';
 import { useLanguage } from '../hooks/useLanguage';
-import './about.css';
+
 
 const AboutPage = () => {
   const [aboutData, setAboutData] = useState([]);
   const [error, setError] = useState(null);
-  console.log(error);
+
   const { lang } = useLanguage(); 
 
   
@@ -52,20 +52,18 @@ const AboutPage = () => {
       <div className="container">
         
         <div className="img-box pb-3">
-            <img src="assets/img/animacs.jpg" alt=""/>
+            <img src="assets/img/animacs.jpg" alt="" style={{ width: "100%", maxWidth: "400px" }}/>
         </div>
 
-        <div className="pt-5 flex-column">
-
-          <h3 className="pb-3">
-              <b>{aboutData[0] ? aboutData[0].titulo[lang] : ""}</b>
+        <div className="pt-5 flex-column" style={{ maxWidth: '100%', wordBreak: 'break-word' }}>
+          <h3 className="pb-3" style={{ maxWidth: '100%', wordBreak: 'break-word' }}>
+            <b>{aboutData[0] ? aboutData[0].titulo[lang] : ""}</b>
           </h3>
 
-          <p className="pt-2">
+          <p className="pt-2" style={{ maxWidth: '100%', wordBreak: 'break-word' }}>
             {aboutData[0] ? aboutData[0].descripcion[lang] : ""}
           </p>
-        
-        </div>
+</div>
 
       </div>
 

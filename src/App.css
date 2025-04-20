@@ -53,7 +53,7 @@ body {
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-  background-image: url('../assets/img/menu.png');
+  background-image: url('/assets/img/menu.png');
   background-size: 42px;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
+  /* background-image: url('/assets/img/search-icon.png'); */
 
   background-size: 22px;
   background-repeat: no-repeat;
@@ -151,3 +151,36 @@ body {
 }
 
 /* Fin Sección Nosotros */
+/* Estilo general del header */
+.header_section {
+  padding: 1rem;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Tema claro */
+.header_section.light {
+  background-color: white;
+  color: black;
+}
+
+/* Tema oscuro */
+.header_section.dark {
+  background-color: #222;
+  color: white;
+}
+
+/* Ajusta el texto del navbar brand también si quieres */
+.navbar-brand span {
+  transition: color 0.5s;
+}
+
+/* El fondo de body también */
+body.light {
+  background-color: white;
+  color: #212529;
+}
+
+body.dark {
+  background-color: #111;
+  color: white;
+}

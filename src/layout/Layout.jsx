@@ -9,12 +9,12 @@ const Layout = ({ children }) => {
     const { lang, setLang } = useLanguage();
 
     return (
-    <div>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header style={{ background: '#222', padding: '1rem', color: 'white' }} lang={lang} handleLang={setLang}>
         Header
       </Header>
 
-      <main style={{ padding: '2rem' }}>
+      <main style={{ flex: 1, padding: '2rem' }}>
         {children}
       </main>
 
