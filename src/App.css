@@ -126,3 +126,28 @@ body {
 .custom_nav-container .navbar-toggler {
   outline: none;
 }
+
+
+/* Sección Nosotros */
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 20px;
+}
+
+.img-about-card {
+  width: 100px;
+  height: 100px;
+}
+
+/* Media query para 600px */
+@media (max-width: 800px) {
+  .about-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Fin Sección Nosotros */
