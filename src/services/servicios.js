@@ -16,7 +16,7 @@ export async function getServices() {
       const data = await response.json();
       return data.data; 
     } catch (error) {
-
+      console.error('Error fetching services:', error);
       return mockdata.data
     }
   }

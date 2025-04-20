@@ -1,5 +1,5 @@
 import  mockdata  from '../services/mock/mockDataNosotros';
-export async function getServices() {
+export async function getAbout() {
     try {
       const response = await fetch('https://ciisa.coningenio.cl/v1/about-us', {
         method: 'GET',
@@ -16,7 +16,7 @@ export async function getServices() {
       const data = await response.json();
       return data.data; 
     } catch (error) {
-
+      console.error('Error fetching about:', error);
       return mockdata.data
     }
   }

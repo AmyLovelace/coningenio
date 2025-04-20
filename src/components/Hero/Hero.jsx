@@ -1,5 +1,26 @@
+import { useLanguage } from "../../hooks/useLanguage";
+import './Hero.css';
+
+
 const Hero = () => {
-    return (
+  const { lang } = useLanguage(); 
+
+  const translations = {
+      SUBTITLE: {
+        esp: 'Consultora',
+        eng: 'Solutions'
+      },
+      MORE: {
+        esp: 'Saber más',
+        eng: 'Know more'
+      },
+      DESCRIPTION: {
+        esp: 'Materializamos tus proyectos con ideas y soluciones innovadoras.',
+        eng: 'We bring your projects to life with innovative ideas and solutions.'
+      }
+  };
+
+  return (
     <section className="slider_section position-relative">
       <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
         <div className="carousel-inner">
@@ -17,15 +38,15 @@ const Hero = () => {
                   <div className="col-md-6">
                     <div className="detail-box d-flex align-items-center justify-content-center flex-column">
                       <div style={{width: '300px'}}>
-                        <h1>
-                        CONINGENIO
+                        <h1 id="hero-title" >
+                          Coningenio
                         <br/>
                           <span>
-                          ASASDDASD
+                          {translations.SUBTITLE[lang]}
                           </span>
                         </h1>
-                        <p style={{fontSize: '1.5rem'}}>
-                        lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam voluptate omnis animi adipisci architecto sit ullam commodi aliquam, quas maiores officiis hic quos facilis repellendus ea sint sapiente quae praesentium?
+                        <p id="hero-description" >
+                          {translations.DESCRIPTION[lang]}
                         </p>
                       </div>
                     </div>
