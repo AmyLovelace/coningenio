@@ -31,7 +31,7 @@ const Hero = () => {
                   <div className="col-md-6">
                     <div className="img-box">
                       <div>
-                        <img src="src/assets/img/slider-img.jpg" alt="" className="" />
+                        <img src="/assets/img/slider-img.jpg" alt="" className="" />
                       </div>
                     </div>
                   </div>
