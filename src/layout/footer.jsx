@@ -17,7 +17,7 @@ const Footer = ({lang}) => {
       <section className="container-fluid footer_section">
           <div className="container mt-5">
               <div className="btn-box">
-                  <a href="/">
+                  <a href="/contacto">
                   {translations.MORE[lang]}
                   </a>
                   <hr />

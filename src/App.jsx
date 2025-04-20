@@ -9,6 +9,7 @@ import { LanguageProvider } from './context/LanguageProvider';
 import AboutPage from './pages/about'
 import HomePage from './pages/homepage'
 import Services from './components/ServicesComp/ServicesComp';
+import ContactPage from './pages/contactpage';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
             <Route path="/" element={<Layout><HomePage /></Layout>} />
             <Route path="/nosotros" element={<Layout><AboutPage /></Layout>} />
             <Route path="/servicios" element={<Layout><Services /></Layout>} />
+            <Route path="/contacto" element={<Layout><ContactPage /></Layout>} />
+
           </Route>
         </Routes>
       </Router>

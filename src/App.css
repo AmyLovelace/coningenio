@@ -151,3 +151,36 @@ body {
 }
 
 /* Fin Sección Nosotros */
+/* Estilo general del header */
+.header_section {
+  padding: 1rem;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Tema claro */
+.header_section.light {
+  background-color: white;
+  color: black;
+}
+
+/* Tema oscuro */
+.header_section.dark {
+  background-color: #222;
+  color: white;
+}
+
+/* Ajusta el texto del navbar brand también si quieres */
+.navbar-brand span {
+  transition: color 0.5s;
+}
+
+/* El fondo de body también */
+body.light {
+  background-color: white;
+  color: #212529;
+}
+
+body.dark {
+  background-color: #111;
+  color: white;
+}
