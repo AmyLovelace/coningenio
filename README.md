@@ -42,3 +42,14 @@ La página web incluye:
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/usuario/repositorio.git
+
+
+
+## despliegue de pagina en : https://coningenio.netlify.app/
+
+
+** preview de la web 
+
+<img width="1679" alt="readme" src="https://github.com/user-attachments/assets/5cd07dc5-67a2-49c8-abb1-0a2178de3fb1" />
+
+
