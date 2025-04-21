@@ -46,7 +46,7 @@ La página web incluye:
 
 
 ## despliegue de pagina en : https://coningenio.netlify.app/
-
+## FIGMA : https://www.figma.com/design/AQhyyAqybiOQFA69KI7h7K/FRONTEND?node-id=1-2&t=721IzgYaKHWy87xZ-1
 
 ** preview de la web 
 
