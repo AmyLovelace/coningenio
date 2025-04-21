@@ -39,6 +39,37 @@ const translations = {
   FORM_SEND: { esp: 'Enviar', eng: 'Send' },
 };
 
+
+const validationMessages = {
+  name: {
+    esp: 'Nombre requerido',
+    eng: 'Name required',
+  },
+  email: {
+    esp: 'Email no válido',
+    eng: 'Invalid email',
+  },
+  phone: {
+    esp: 'Teléfono no válido',
+    eng: 'Invalid phone number',
+  },
+  service: {
+    esp: 'Debes seleccionar un servicio',
+    eng: 'You must select a service',
+  },
+  message: {
+    esp: 'Mensaje requerido',
+    eng: 'Message required',
+  },
+  successTitle: {
+    esp: 'Formulario enviado!',
+    eng: 'Form submitted!',
+  },
+  successText: {
+    esp: 'Gracias por contactarnos.',
+    eng: 'Thank you for contacting us.',
+  },
+};
   const ContactForm = () => {
   const { lang } = useLanguage();  
   
@@ -59,21 +90,21 @@ const translations = {
   const validateField = (name, value) => {
     switch (name) {
       case 'name':
-        if (!value.trim()) return 'Nombre requerido';
+        if (!value.trim()) return validationMessages.name[lang];
         break;
       case 'email':
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) return 'Email no válido';
+        if (!emailRegex.test(value)) return validationMessages.email[lang];
         break;
       case 'phone':
         const phoneRegex = /^[0-9\-\+\s\(\)]+$/;
-        if (!phoneRegex.test(value)) return 'Teléfono no válido';
+        if (!phoneRegex.test(value)) return validationMessages.phone[lang];
         break;
       case 'service':
-        if (value === translations.FORM_SERVICE_OPTIONS[lang][0]) return 'Debes seleccionar un servicio';
+        if (value === translations.FORM_SERVICE_OPTIONS[lang][0]) return validationMessages.service[lang];
         break;
       case 'message':
-        if (!value.trim()) return 'Mensaje requerido';
+        if (!value.trim()) return validationMessages.message[lang];
         break;
       default:
         return '';
@@ -110,8 +141,8 @@ const translations = {
     console.log('Formulario válido:', formData);
     Swal.fire({
       icon: 'success',
-      title: 'Formulario enviado!',
-      text: 'Gracias por contactarnos.',
+      title: validationMessages.successTitle[lang],
+      text: validationMessages.successText[lang],
     });
   };
   return (
